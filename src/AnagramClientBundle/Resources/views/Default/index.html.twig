@@ -1,0 +1,37 @@
+{% extends "::base.html.twig" %}
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('anagram/css/anagram.css') }}" />
+{% endblock %}
+{% block body %}
+    {% form_theme form 'bootstrap_3_layout.html.twig' %}
+    <div class="">
+        <div class="col-sm-12 block-title">
+            <h1 class="big-title text-center">Anagram</h1>
+        </div>
+        <div class="col-sm-4 col-sm-offset-4 block-search">
+            {{ form_start(form) }}
+            {{ form_row(form.search) }}
+            <div class="text-center">
+                {{ form_row(form.submit) }}
+            </div>
+            {{ form_end(form) }}
+        </div>
+        <div class="anagram-list col-sm-6 col-sm-offset-3 text-center">
+            {% for key, list in words %}
+                <div class="block-list col-sm-12">
+                    <div class="col-sm-4 nb-letter">
+                       <label>in</label>{{ key }}<label>letter(s)</label>
+                    </div>
+                    <div class="word-list col-sm-4">
+                        {% for word in list %}
+                            <label>{{ word }}</label><br>
+                        {% endfor %}
+                    </div>
+                    <div class="col-sm-4 nb-word">
+                        {{ list|length }}<label>word(s)</label>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

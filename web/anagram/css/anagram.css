@@ -1,0 +1,126 @@
+
+@font-face {
+    font-family: titleFont;
+    src: url("../fonts/Mightype-Script.otf") format('opentype');
+}
+@font-face {
+    font-family: textFont;
+    src: url("../fonts/Panama-Light.otf") format('opentype');
+}
+
+body {
+    background-color: #F4BF42 !important;
+    font-family: textFont !important;
+}
+
+h1.big-title {
+    color: #EC368D;
+    font-size: 25em;
+    font-family: titleFont;
+}
+
+label {
+    display: none;
+}
+
+.block-search {
+    margin-top: 100px;
+}
+
+.block-title {
+    margin-top: 60px;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    height: 50px;
+    background-color: #FF89C2;
+    border: 2px solid #57395E;
+    color: white;
+    font-size: 30px;
+}
+
+input {
+    color: white;
+}
+
+input[type=text]:focus {
+    background-color: #EF5AA1;
+}
+
+input[type=text]:focus {
+    border: 3px solid #561434;
+}
+
+input::-webkit-input-placeholder {
+    color: white !important;
+}
+
+input:-moz-placeholder { /* Firefox 18- */
+    color: white !important;
+}
+
+input::-moz-placeholder {  /* Firefox 19+ */
+    color: white !important;
+}
+
+input:-ms-input-placeholder {
+    color: white !important;
+}
+
+.form-group label {
+    display: none;
+}
+
+.btn {
+    padding: 14px 24px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
+
+.btn-valider {
+    background: #412A1A;
+    color: #ffffff;
+    margin-top: 20px;
+    height: 50px;
+    width: 300px;
+    font-size: 25px !important;
+}
+
+.btn-valider:hover, .btn-valider:focus, .btn-valider:active, .btn-valider.active, .open > .dropdown-toggle.btn-valider {
+    background: #8F5C38;
+    color: #ffffff !important;
+}
+
+.btn-valider:active, .btn-valider.active {
+    background: #764C2E;
+    box-shadow: none;
+}
+
+div.word-list {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: solid 3px #412A1A;
+    border-radius: 20px;
+    color: #412A1A;
+    font-size: 25px;
+}
+
+.nb-letter, .nb-word {
+    font-size: 110px;
+    color: #412A1A;
+}
+
+.block-list label {
+    font-size: 30px;
+}
